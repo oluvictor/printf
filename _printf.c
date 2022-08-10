@@ -13,7 +13,6 @@ int _printf(const char *format, ...)
 {
 	int i = 0;
 	int char_sum = 0;
-	printer print_t;
 	va_list va;
 
 	va_start(va, format);

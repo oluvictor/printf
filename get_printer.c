@@ -11,15 +11,22 @@
  */
 int get_printer(va_list va, char c)
 {
-	int i = 0;
 	int char_sum = 0;
 
-	/*va_start(va, format);*/
 	switch (c)
 	{
 		case 'c':
-			char_sum += print_char(va_arg(va, char));
+			char_sum += print_char(va_arg(va, int));
 			break;
+		case 's':
+			char_sum += print_string(va_arg(va, char *));
+			break;
+		case '%':
+			_putchar('%');
+			char_sum++;
+			break;
+		/*default:
+			char_sum += print_string(va_arg(va,  char *));*/
 	}
 	return (char_sum);
 }

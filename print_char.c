@@ -2,24 +2,14 @@
 #include "main.h"
 
 /**
- * get_printer - selects the right function to print the argument
- * @va: va_list of arguments
- * @c: specifier
+ * print_char - prints a character to stdout
+ * @c: character to print
  *
  * Return: the number of characters printed (excluding
  * the null byte used to end output to strings)
  */
-int get_printer(va_list va, char c)
+int print_char(char c)
 {
-	int i = 0;
-	int char_sum = 0;
-
-	/*va_start(va, format);*/
-	switch (c)
-	{
-		case 'c':
-			char_sum += print_char(va_arg(va), char);
-			break;
-	}
-	return (char_sum);
+	_putchar(c);
+	return(1);
 }
