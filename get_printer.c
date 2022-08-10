@@ -25,8 +25,10 @@ int get_printer(va_list va, char c)
 			_putchar('%');
 			char_sum++;
 			break;
-		/*default:
-			char_sum += print_string(va_arg(va,  char *));*/
+		default:
+			_putchar('%');
+			_putchar(c);
+			char_sum++;
 	}
 	return (char_sum);
 }
