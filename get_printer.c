@@ -28,7 +28,7 @@ int get_printer(va_list va, char c)
 		default:
 			_putchar('%');
 			_putchar(c);
-			char_sum++;
+			char_sum += 2;
 	}
 	return (char_sum);
 }

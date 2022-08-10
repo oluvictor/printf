@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include "main.h"
+#include <stdio.h>
 
 /**
  * _printf - produces output according to a format
@@ -24,15 +25,16 @@ int _printf(const char *format, ...)
 			{
 				/*arg = va_arg(va);*/
 				/*print_t.c = format[i];*/
-				char_sum = get_printer(va, format[i + 1]);
+				char_sum += get_printer(va, format[i + 1]);
 				/*char_sum += print_t();*/
 				i += 2;
 			}
 			_putchar(format[i]);
-			char_sum++;
+			/*char_sum += 1;*/
 			i++;
 		}
 	}
 	va_end(va);
+	printf("%d", char_sum);
 	return (char_sum);
 }
